@@ -1,11 +1,9 @@
-import './App.css';
+import CreateAccount from './components/createAccount';
 
 function App() {
   return (
-    <div className="App">
-        <div className="a-icon-logo" />
-        
-        
+    <div>
+      <CreateAccount />
     </div>
   );
 }

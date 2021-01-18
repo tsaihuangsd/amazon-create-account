@@ -16,7 +16,7 @@ const CreateAccountView = () =>{
                         <input type="text" id="email"></input><br/>
                         <label>Password</label><br/>
                         <input type="text" id="password"></input><br/>
-                        <h5>Passwords must be at least 6 characters.</h5>
+                        {/* <h5>Passwords must be at least 6 characters.</h5> */}
                         <label>Re-enter password</label><br/>
                         <input type="text" id="reenter-password"></input><br/>
                         <input type="submit" value="Create your Amazon account"></input>
@@ -30,6 +30,14 @@ const CreateAccountView = () =>{
                     </h5>
                 </div>                    
             </div> 
+            <div className="footer">
+                <div className="footer-links">
+                    <a href={Constants.LINK_CONDITION_OF_USE}>Conditions of Use</a>
+                    <a href={Constants.LINK_PRIVACY_NOTICE}>Privacy Notice</a>
+                    <a href={Constants.LINK_HELP}>Help</a>                    
+                </div>
+                <h6>© 1996-2020, Amazon.com, Inc. or its affiliates</h6>
+            </div>
         </div>
     )
 }

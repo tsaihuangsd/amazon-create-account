@@ -51,7 +51,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 10px;
+      margin: 20px;
+      padding: 20px;
       display: block;
       ;
       box-sizing: border-box;
@@ -64,16 +65,23 @@
       line-height: 19px;
       width: 350px;
       height: 500px;
-      margin: 10px, auto;
     }
 
   
   /* .create-account-box {
   } */
 
+.footer-links {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 a {
   text-decoration: none;
   color: #18b;
+
 }
 
 a:hover {
@@ -82,5 +90,9 @@ a:hover {
 }
 
 
+
+#password {
+  color: gray;
+}
 
   

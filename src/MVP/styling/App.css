@@ -27,6 +27,12 @@
   .App-link {
     color: #61dafb;
   }
+
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
   .a-icon-logo {     
     margin-top: 22px; 
@@ -45,7 +51,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 10px;
+      margin: 10px;
       display: block;
       ;
       box-sizing: border-box;

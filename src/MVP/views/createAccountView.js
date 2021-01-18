@@ -4,11 +4,11 @@ import * as Constants from '../constants';
 
 const CreateAccountView = () =>{    
     return (
-        <div className="App">
+        <div className="main-container">
             <div className="a-icon-logo" />
             <div className="box-container">
                 <div className="create-account-box">
-                    <h2>Create CreateAccount</h2>             
+                    <h2>Create account</h2>             
                     <form>
                         <label for="name">Your name</label><br/>
                         <input type="text" id="name"></input><br/>

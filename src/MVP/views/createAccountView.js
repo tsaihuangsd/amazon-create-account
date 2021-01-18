@@ -2,14 +2,14 @@ import React from 'react';
 import '../styling/App.css';
 import * as Constants from '../constants';
 
-const CreateAccountView = ({name, email, password, rePassword, handleChange}) =>{    
+const CreateAccountView = ({name, email, password, rePassword, handleChange, handleSubmit}) =>{    
     return (
         <div className="main-container">
             <div className="a-icon-logo" />
             <div className="box-container">
                 <div className="create-account-box">
                     <h2>Create account</h2>             
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label>Your name</label><br/>
                         <input type="text" id="name" value={name} onChange={handleChange}></input><br/><br/>
                         <label>Email</label><br/>
@@ -18,7 +18,7 @@ const CreateAccountView = ({name, email, password, rePassword, handleChange}) =>
                         <input type="text" id="password" placeholder="At least 6 characters" value={password} onChange={handleChange}></input>
                         <h5 id="passord-requirement">Passwords must be at least 6 characters.</h5><br/>
                         <label>Re-enter password</label><br/>
-                        <input type="text" id="reenter-password" value={rePassword} onChange={handleChange}></input><br/><br/>
+                        <input type="text" id="rePassword" value={rePassword} onChange={handleChange}></input><br/><br/>
                         <input type="submit" id="create-account-button" value="Create your Amazon account"></input><br/><br/>
                     </form>
                     <h5>By creating an account, you agree to Amazon's <a href={Constants.LINK_CONDITION_OF_USE}>Conditions of Use</a> and <a href={Constants.LINK_PRIVACY_NOTICE}>Privacy Notice</a>.

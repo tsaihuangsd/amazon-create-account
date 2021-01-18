@@ -8,8 +8,13 @@ const CreateAccount = () =>{
     });
 
     const handleChange=(e)=>{
-        setState({[e.target.id]: e.target.value});
-        console.log(e.target.id, ": ", e.target.value)
+        setState({  ...state,
+                    [e.target.id]: e.target.value.trim()});
+    }
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        console.log("Submitted: ", state);
     }
 
     return (
@@ -18,7 +23,8 @@ const CreateAccount = () =>{
             email={state.email} 
             password={state.password} 
             rePassword={state.rePassword} 
-            handleChange={handleChange}/>
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}/>
     );
 }
 

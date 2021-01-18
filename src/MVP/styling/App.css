@@ -89,10 +89,22 @@ a:hover {
   cursor: pointer;
 }
 
-
-
-#password {
-  color: gray;
+label {
+  font-weight: bold;
 }
 
-  
+input {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#passord-requirement{
+  margin: 0px;
+}
+
+#create-account-button {
+  color:white;
+  background-color: #1A8CC4;
+  border-width: 0px;
+}

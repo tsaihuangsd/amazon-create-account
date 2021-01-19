@@ -8,8 +8,8 @@ const CreateAccount = () =>{
     });
 
     const handleChange=(e)=>{
-        setState({  ...state,
-                    [e.target.id]: e.target.value.trim()});
+        setState({...state,
+                [e.target.id]: e.target.value.trim()});
     }
 
     const handleSubmit = (e) =>{
@@ -19,10 +19,7 @@ const CreateAccount = () =>{
 
     return (
         <CreateAccountView 
-            name={state.name} 
-            email={state.email} 
-            password={state.password} 
-            rePassword={state.rePassword} 
+            state={state} 
             handleChange={handleChange}
             handleSubmit={handleSubmit}/>
     );

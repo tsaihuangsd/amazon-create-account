@@ -2,12 +2,43 @@ import React from 'react';
 import '../styling/App.css';
 import * as Constants from '../constants';
 
-const CreateAccountView = ({state, handleChange, handleSubmit}) =>{    
+const CreateAccountView = ({state, handleChange, handleSubmit}) =>{   
+
+    const WarningBlock =() =>{
+        console.log("state.warning: ", state.warning)
+        switch (state.warning){
+            case "password-mismatch":
+                return (<div id="password-mismatch">
+                            <img id="warning-img" alt="warning"/>
+                            <div className="warning-text-container">
+                                <h4>There was a problem</h4>
+                                <h6>Passwords must match</h6>
+                            </div>
+                        </div>)
+            case "password-short":
+                return (<div id="password-short">
+                            <img id="warning-img" alt="warning"/>
+                            <div className="warning-text-container">
+                                <h4>There was a problem</h4>
+                                <h6>Passwords must be at least 6 characters</h6>
+                            </div>
+                </div>)
+            case "email-invalid":
+                return (<div id="email-invalid">
+                            <img id="warning-img" alt="warning"/>
+                            <div className="warning-text-container">
+                                <h4>There was a problem</h4>
+                                <h6>Email must be a valid address</h6>
+                            </div>   
+                        </div>)
+            default:
+                return (<div style={{display:'none'}}>hello</div>)
+        }
+    }
     return (
         <div className="main-container">
             <div className="a-icon-logo" style={{backgroundImage: 'url(' + Constants.LINK_AMAZON_LOGO + ')'}} />
-            <div className=""></div>
-
+            <WarningBlock />
             <div className="box-container">
                 <div className="create-account-box">
                     <h2>Create account</h2>             

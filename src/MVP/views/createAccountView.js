@@ -25,7 +25,7 @@ const CreateAccountView = ({state, handleChange, handleSubmit}) =>{
                 warningColor = "orange";
                 warningImgBkgdPosition = "-282px -35px";
                 break;
-            case "missing-name" || "missing-email" ||"missing-password":
+            case "missing-name": case "missing-email": case "missing-password":
                 warningContent=`Enter your ${state.warning.substr(8)}`;
                 warningColor = "#d33";
                 warningImgBkgdPosition = "-248px -35px";

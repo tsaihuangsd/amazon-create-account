@@ -14,12 +14,35 @@ const CreateAccount = () =>{
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        // (state.password !== state.rePassword)
-        //     ? setState({...state,
-        //             warning: "password-mismatch"})
-        //     : setState({...state,
-        //         warning: ""})
-        
+        //Determine which type of error does the input data contain, if any
+        if (state.password ===""){
+            setState({...state,
+                warning: "missing-password"})
+        }
+        else if (state.email ===""){
+            setState({...state,
+                warning: "missing-email"})
+        }
+        else if (state.name ===""){
+            setState({...state,
+                warning: "missing-name"})
+        }
+        else if (!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(state.email).toLowerCase())){    //check if entered a proper email address
+            setState({...state,
+                warning: "email-invalid"})
+        }
+        else if (state.password.length <6){
+            setState({...state,
+                warning: "password-short"})
+        }
+        else if (state.password !== state.rePassword){
+            setState({...state,
+                    warning: "password-mismatch"})
+        }
+        else{
+            setState({...state,
+                warning: ""})
+        }
         console.log("Submitted: ", state);
     }
 

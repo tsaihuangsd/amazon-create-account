@@ -7,7 +7,6 @@ https://www.amazon.com/ap/register?clientContext=130-4649631-2400710&openid.retu
 
 
 
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

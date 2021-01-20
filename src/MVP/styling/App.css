@@ -1,5 +1,15 @@
+:root{
+  --amazon-img-url: url("https://m.media-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_1x-c4a765aedd886dc04d89e7e93b6a02c59ecb7013._V2_.png");
+  --amazon-icon-url: url("https://m.media-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_1x-c4a765aedd886dc04d89e7e93b6a02c59ecb7013._V2_.png");
+  font-family: "Amazon Ember",Arial,sans-serif;
+}
 
 /* General tags */
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+  margin: 0px;
+}
+
 a {
   text-decoration: none;
   color: #18b;
@@ -16,9 +26,13 @@ label {
 }
 
 input {
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
   width: 100%;
   margin: 0px;
   padding: 0px;
+  height: 31px;
+  color: #111;
 }
 
 /* Classes */
@@ -60,6 +74,7 @@ input {
 
 .a-icon-logo {     
   margin-top: 22px; 
+  background-image: var(--amazon-img-url);
   background-size: 400px 750px;
   background-repeat: no-repeat;
   background-position: -5px -130px;
@@ -69,12 +84,21 @@ input {
   width: 103px;
 }
 
+.a-icon-alert{
+  background-image: var(--amazon-icon-url);
+  background-position: -166px -130px;
+  display: inline-block;
+  height: 13px;
+  width: 14px;
+}
+
 .box-container {
+    margin-top:20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px;
+    /* margin: 20px; */
     padding: 20px;
     display: block;
     ;
@@ -87,22 +111,65 @@ input {
     font-size: 13px;
     line-height: 19px;
     width: 350px;
-    height: 500px;
+    height: 514.3px;
     }
+
+.password-requirement-container{
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
 
 .footer-links {
   font-size: 12px;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+}
+
+.warning-block {
+  display:flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: .1px;
+  width: 350px;
+  margin: 10px;
+}
+
+.warning-text-container{
+  display:flex;
+  flex-direction: column;
+}
+
+.sign-in-box{
+  height: 44px;
+  background: linear-gradient(to right,#fff,rgba(255,255,255,0),#fff);
+  z-index: 0;
+  zoom: 1;
+  background-color: transparent;
+  margin:20px 0 0 0;
 }
 
 /* Id's */
 #passord-requirement{
   margin: 0px;
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 #create-account-button {
   color:white;
   background-color: #1A8CC4;
   border-width: 0px;
+}
+
+#warning-img{
+  background-image: var(--amazon-img-url);
+  height: 27px;
+  width: 30px;
+  margin: 15px;
 }
